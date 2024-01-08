@@ -3,6 +3,7 @@ import Footer from '../components/Footer.astro';
 import Navigation from '../components/Header.astro';
 import '../style/global.css';
 
+const allPosts = await Astro.glob('../pages/posts/*.md');
 
 const pageTitle = "Mon blog d'apprentissage Astro";
 
@@ -26,5 +27,8 @@ const pageTitle = "Mon blog d'apprentissage Astro";
             <li><a href="/posts/post-3/">Article 3</a></li>
         </ul>
         <Footer />
+        <script>
+			import "../script/menu.js";
+		</script>
     </body>
 </html>
